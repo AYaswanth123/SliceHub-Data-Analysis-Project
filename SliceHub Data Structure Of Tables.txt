@@ -1,0 +1,51 @@
+Table1: Pizzas 
+Columns: 
+pizza_id: This is a unique identifier for each pizza. It is a combination of the pizza_type_id and the size. This ID uniquely 
+          identifies a specific type and size of pizza in the database.
+
+pizza_type_id: This column represents the type of pizza, with catagory. 
+               Each pizza type has its own unique identifier.
+
+size: This column indicates the size of the pizza, such as "small", "medium", or "large".
+
+price: This column represents the price of the pizza, which varies based on the type and size of the pizza.
+
+
+Table2: Pizza_types
+Columns: 
+pizza_type_id: This column represents the type of pizza, with catagory. 
+               Each pizza type has its own unique identifier.
+name: This column contains the full name of the pizza, providing a descriptive label for each type.
+
+category: This column specifies the category to which the pizza belongs. Categories might include "Chicken" for chicken-based pizzas, 
+          "Classic" for traditional favorites, "Supreme" for pizzas with a variety of toppings, and "Veggie" for vegetarian options.
+
+ingredients: This column lists the ingredients used in the pizza. It includes all the components that make up the pizza, 
+            such as cheese, tomato sauce, specific meats, and vegetables.
+
+
+Table3: Orders
+Columns:
+order_id: This is a unique identifier for each order. It distinguishes one order from another and is used to track specific 
+          orders throughout the database.
+
+date: This column records the date on which the order was placed. It typically follows the format "YYYY-MM-DD" and helps 
+      in tracking sales trends and patterns over time.
+
+time: This column captures the exact time when the order was placed. It is usually in "HH:MM:SS"
+
+
+
+Table4: Order_details
+Columns: 
+order_details_id: This is a unique identifier for each record in the Order_details table. It differentiates individual items within
+                  an order and is used to manage the details of each specific order.
+
+order_id: This column references the order_id from the Orders table, linking each item in an order to its corresponding overall 
+          order. It allows you to associate multiple pizzas with a single order.
+
+pizza_id: This column references the pizza_id from the Pizzas table, indicating which specific pizza was ordered. It connects the 
+          details of the pizza type and size to the order.
+
+quantity: This column records the quantity of the specific pizza type ordered. It shows how many of the same pizza were included 
+          in that particular order.
